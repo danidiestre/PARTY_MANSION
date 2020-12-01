@@ -1,0 +1,14 @@
+<div class="container">
+    <div class="show-card">
+        <h1><%= @mansion.title %></h1>
+        <%= cl_image_tag @mansion.photo.key, height: 300, width: 800, crop: :fill%>
+    </div>
+
+    <div class= "card">
+        <h2><%= @mansion.description %></h3>
+        <h3>Party Capacity:<%= @mansion.capacity %></h2>
+
+        <h3><%= @mansion.description %></h2>
+    
+    </div>
+</div>
