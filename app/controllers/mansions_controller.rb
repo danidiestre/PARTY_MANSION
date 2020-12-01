@@ -1,5 +1,4 @@
 class MansionsController < ApplicationController
-
     def index
         @mansions = Mansion.all
     end
@@ -27,5 +26,4 @@ class MansionsController < ApplicationController
     def mansion_params
         params.require(:mansion).permit(:address, :price, :capacity, :title, :description, :photo)
     end
-
 end
