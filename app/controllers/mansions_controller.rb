@@ -13,7 +13,7 @@ class MansionsController < ApplicationController
 
   def create
     @mansion = Mansion.new(mansion_params)
-    # @mansion.user = current_user
+    @mansion.user = current_user
     if @mansion.save!
       redirect_to mansion_path(@mansion)
     else
