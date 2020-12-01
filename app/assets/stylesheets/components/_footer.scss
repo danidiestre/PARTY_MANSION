@@ -7,11 +7,17 @@
   display: flex;
   justify-content: center;
   p {
-    padding: 0 8px;
+    padding: 4px 8px;
+    margin-bottom: 0;
   }
   i {
     padding-right: 4px;
   }
+}
+
+.text-two i {
+  font-size: 20px;
+  padding: 8px;
 }
 
 
@@ -19,6 +25,11 @@
   display: flex;
   justify-content: center;
   p {
-    padding: 0 8px;
+    padding: 4px 8px;
+    margin-bottom: 0;
   }
+}
+
+.text-four {
+  padding: 4px 0;
 }
