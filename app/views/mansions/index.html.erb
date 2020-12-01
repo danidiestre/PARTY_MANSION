@@ -1,0 +1,30 @@
+
+<div class="container">
+  <H2>These are the mansions</H2>
+  <div class="d-flex">
+    <div class="mansion-list">
+      <% @mansions.each do |mansion| %>
+        <div class="card-product">
+          <% if mansion.photo.attached? %>
+          <%= cl_image_tag mansion.photo.key, height: 300, width: 400, crop: :fill  %>
+          <% end %>
+          <div class="card-trip-infos">
+            <div>
+              <h2> <%= mansion.title %></h2>
+              <p> <%= mansion.description %> </p>
+            </div>
+            <h2 class="card-trip-pricing">£mansion.price</h2>
+          </div>
+        </div>
+      <% end %>
+    </div>
+
+
+    <img id="map" src='https://api.mapbox.com/styles/v1/mapbox/streets-v11/static/2.3381,48.8693,10.45,0,0/600x1000?access_token=pk.eyJ1IjoiamF1bWVyb3MiLCJhIjoiY2toZ2JxeHRyMDZjODJ6cDlrYXZid2FtNyJ9.G9aLtUJJRP-654jczWoV3A'>
+
+  </div>
+</div>
+
+
+
+

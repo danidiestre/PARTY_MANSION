@@ -21,7 +21,7 @@ jaume = User.create(email: "jaume@gmail.com", password: "password")
 
 
 
-file_balmes = URI.open('https://unsplash.com/photos/PyFzygP2eNg')
+file_balmes = URI.open('https://images.unsplash.com/photo-1505843795480-5cfb3c03f6ff?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1491&q=80')
 
 balmes = Mansion.create(
   address: 'Carrer Balmes 382',
@@ -35,7 +35,7 @@ balmes = Mansion.create(
 balmes.photo.attach(io: file_balmes, filename: 'balmes.png', content_type: 'image/png')
 
 
-file_muntaner = URI.open('https://unsplash.com/photos/_hw4aUQ81ic')
+file_muntaner = URI.open('https://images.unsplash.com/photo-1566908829550-e6551b00979b?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1349&q=80')
 muntaner = Mansion.create(
   address: 'Carrer Muntaner 192',
   price: 10000,
@@ -47,7 +47,7 @@ muntaner = Mansion.create(
 
 muntaner.photo.attach(io: file_muntaner, filename: 'muntaner.png', content_type: 'image/png')
 
-file_plaza = URI.open('https://unsplash.com/photos/Th2MisvdKr0')
+file_plaza = URI.open('https://images.unsplash.com/photo-1573599852326-2d4da0bbe613?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1281&q=80')
 
 plaza = Mansion.create(
   address: 'Plaza Catalunya 1',
@@ -59,7 +59,7 @@ plaza = Mansion.create(
   )
 plaza.photo.attach(io: file_plaza, filename: 'plaza.png', content_type: 'image/png')
 
-file_pearson = URI.open('https://unsplash.com/photos/bbce31pJY-w')
+file_pearson = URI.open('https://images.unsplash.com/photo-1572718329684-bd59a824d1b9?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1341&q=80')
 
 pearson = Mansion.create(
   address: 'Avenida Pearson',
@@ -70,10 +70,10 @@ pearson = Mansion.create(
   user: dani
 )
 
-muntaner.photo.attach(io: file_pearson, filename: 'pearson.png', content_type: 'image/png')
+pearson.photo.attach(io: file_pearson, filename: 'pearson.png', content_type: 'image/png')
 
 
-file_palamos = URI.open('https://unsplash.com/photos/KRNVePAZwMg')
+file_palamos = URI.open('https://images.unsplash.com/photo-1603460217649-decbe0624f54?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1348&q=80')
 
 palamos = Mansion.create(
   address: 'Palamos carrer de laigua',
