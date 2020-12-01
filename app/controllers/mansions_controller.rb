@@ -1,4 +1,5 @@
 class MansionsController < ApplicationController
+<<<<<<< HEAD
     def index
         @mansions = Mansion.all
     end
@@ -12,19 +13,19 @@ class MansionsController < ApplicationController
     end
     
     def create
-        @mansion =  Mansion.new(mansion_params)
-        if @mansion.save
+        @mansion = Mansion.new(mansion_params)
+        @mansion.user = current_user
+        if @mansion.save!
           redirect_to mansion_path(@mansion)
         else
-          render 'new'
+          render :new
         end
     end
-    
       
     private
     
     def mansion_params
-        params.require(:mansion).permit(:address, :price, :capacity, :title, :description )
+        params.require(:mansion).permit(:address, :price, :capacity, :title, :description, :photo)
     end
 
 end

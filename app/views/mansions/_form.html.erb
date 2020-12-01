@@ -1,0 +1,14 @@
+<div class="container mt-4 mb-5">
+  <div class="form mt-3">
+    <h1>Add new Mansion</h1>
+    <%= simple_form_for(@mansion) do |f| %>
+      <%= f.input :title %>
+      <%= f.input :address %>
+      <%= f.input :price %>
+      <%= f.input :capacity %>
+      <%= f.input :photo, as: :file %>
+      <%= f.submit "Add Mansion", :class => "btn btn-primary"  %>
+    <% end %>
+  </div>
+</div>
+
