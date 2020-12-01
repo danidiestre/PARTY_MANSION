@@ -13,6 +13,6 @@ class MansionsController < ApplicationController
   end
 
   def mansion_params
-    params.require(:car).permit(:address, :price, :capacity, :title, :description, :photo)
+    params.require(:mansion).permit(:address, :price, :capacity, :title, :description, :photo)
   end
 end
