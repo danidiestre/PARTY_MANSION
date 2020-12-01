@@ -1,5 +1,5 @@
 class MansionsController < ApplicationController
-<<<<<<< HEAD
+
     def index
         @mansions = Mansion.all
     end
