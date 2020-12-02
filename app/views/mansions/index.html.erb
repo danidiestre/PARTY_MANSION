@@ -1,5 +1,5 @@
 <div class="container">
-  <H2>These are the mansions</H2>
+  <H2 class="my-3">These are the mansions</H2>
   <div class="d-flex index-container">
     <div class="mansion-list w-50 h-100">
       <% @mansions.each do |mansion| %>
@@ -13,16 +13,16 @@
                 <h2> <%= mansion.title %></h2>
                 <p> <%= mansion.description %> </p>
               </div>
-              <h2 class="card-trip-pricing">£ <%= mansion.price %></h2>
+              <h2 class="card-trip-pricing">£ <%= mansion.price %>/night</h2>
             </div>
           </div>
         <% end %>
-      <% end %>  
+      <% end %>
     </div>
       <div id="map"
       style="width: 50%; height: 600px;"
       data-markers="<%= @markers.to_json %>"
-      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"> 
+      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
       </div>
 
   </div>
