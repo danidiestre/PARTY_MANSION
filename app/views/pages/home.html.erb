@@ -1,50 +1,25 @@
-
-  <div class="banner">
+<div class="banner">
     <div class="container banner-container">
       <h1>Find your party mansion!</h1>
           <%= link_to "Explore", mansions_path, class: "btn btn-primary btn-lg" %>
       </div>
   </div>
-
+<h2> Featured mansions </h2>
 <div class="container my-5">
   <div class="row">
-    <div class="col-xs-12 col-sm-6 col-md-4">
-      <div class="card border-card no-border">
-        <div class="img-card" style="background-image: url(https://images.unsplash.com/photo-1578439297699-eb414262c2de?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1307&q=80)"></div>
-
-        <div class="card-body">
-          <h4><strong>Some title here</strong></h4>
-          <p>Description here</p>
-          <%= link_to "see details", mansions_path %>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-xs-12 col-sm-6 col-md-4">
-      <div class="card border-card no-border">
-        <div class="img-card" style="background-image: url(https://images.unsplash.com/photo-1578439297699-eb414262c2de?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1307&q=80)"></div>
-
-        <div class="card-body">
-          <h4><strong>Some title here</strong></h4>
-          <p>Description here</p>
-          <%= link_to "see details", mansions_path %>
-        </div>
-      </div>
-    </div>
-
+    <% @mansions.each do |mansion| %>
         <div class="col-xs-12 col-sm-6 col-md-4">
-      <div class="card border-card no-border">
-        <div class="img-card" style="background-image: url(https://images.unsplash.com/photo-1578439297699-eb414262c2de?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1307&q=80)"></div>
-
-        <div class="card-body">
-          <h4><strong>Some title here</strong></h4>
-          <p>Description here</p>
-          <%= link_to "see details", mansions_path %>
+          <%= link_to mansion_path(mansion) do  %>
+          <div class="card border-card no-border h-100">
+            <div class="img-card" style="background-image: url(<%= cl_image_path mansion.photo.key %>)"></div>
+            <div class="card-body">
+              <h4><strong><%= mansion.title %></strong></h4>
+              <p><%= mansion.description %></p>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-
-
+      <% end %>
+    <% end %>
   </div>
 </div>
 

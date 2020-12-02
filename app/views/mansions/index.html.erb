@@ -4,18 +4,20 @@
   <div class="d-flex index-container">
     <div class="mansion-list w-50 h-100">
       <% @mansions.each do |mansion| %>
+      <%= link_to mansion_path(mansion) do  %>
         <div class="card-product border-card mb-3">
           <% if mansion.photo.attached? %>
-          <%= cl_image_tag mansion.photo.key, class: "h-100"  %>
-          <% end %>
-          <div class="card-trip-infos px-3">
-            <div>
-              <h2> <%= mansion.title %></h2>
-              <p> <%= mansion.description %> </p>
+           <%= cl_image_tag mansion.photo.key, class: "h-100"  %>
+            <% end %>
+            <div class="card-trip-infos px-3">
+              <div>
+                <h2> <%= mansion.title %></h2>
+                <p> <%= mansion.description %> </p>
+              </div>
+              <h2 class="card-trip-pricing">£ <%= mansion.price %></h2>
             </div>
-            <h2 class="card-trip-pricing">£ <%= mansion.price %></h2>
           </div>
-        </div>
+        <% end %>
       <% end %>
     </div>
 

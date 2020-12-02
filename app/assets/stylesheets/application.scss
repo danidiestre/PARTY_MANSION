@@ -15,4 +15,11 @@
 @import "components/map";
 @import "components/show_card";
 
-
+a {
+  color:inherit;
+  text-decoration: none;
+  &:hover {
+    color:inherit;
+    text-decoration: none;
+  }
+}
