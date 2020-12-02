@@ -1,4 +1,3 @@
-
 <div class="container">
   <H2>These are the mansions</H2>
   <div class="d-flex index-container">
@@ -19,8 +18,11 @@
       <% end %>
     </div>
 
-
-    <img class="w-50" id="map" src='https://api.mapbox.com/styles/v1/mapbox/streets-v11/static/2.3381,48.8693,10.45,0,0/600x1000?access_token=pk.eyJ1IjoiamF1bWVyb3MiLCJhIjoiY2toZ2JxeHRyMDZjODJ6cDlrYXZid2FtNyJ9.G9aLtUJJRP-654jczWoV3A'>
+    <div id="map"
+     style="width: 100%; height: 600px;"
+     data-markers="<%= @markers.to_json %>"
+     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"> 
+    </div>
 
   </div>
 </div>
