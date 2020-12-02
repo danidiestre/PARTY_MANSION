@@ -5,6 +5,7 @@ class MansionsController < ApplicationController
 
   def show
     @mansion = Mansion.find(params[:id])
+    @booking = Booking.new
   end
 
   def new
