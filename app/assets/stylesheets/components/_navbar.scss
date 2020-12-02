@@ -8,10 +8,7 @@
   background: transparent;
   position: absolute;
   width: 100%;
-
 }
-
-
 #logo_name {
   display: flex;
   color: white;
@@ -20,23 +17,18 @@
     margin-bottom: 0;
   }
 }
-
 .login.nav-link {
   color: white !important;
 }
 .nav-item > a {
   color: white;
-
 }
-
 #name {
   padding-left: 30px;
 }
-
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
 }
-
 .navbar-lewagon .navbar-brand img {
   width: 40px;
 }
