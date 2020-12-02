@@ -27,11 +27,9 @@ const initMapbox = () => {
       const element = document.createElement('div');
       element.className = 'marker';
       element.style.backgroundImage = `url('${marker.image_url}')`;
-      element.style.borderRadius = '50%';
       element.style.backgroundRepeat = 'no-repeat';
-
-
       element.style.backgroundSize = 'contain';
+      element.style.borderRadius = '50%';
       element.style.width = '50px';
       element.style.height = '55px';
 
