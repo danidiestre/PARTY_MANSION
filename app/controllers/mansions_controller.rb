@@ -1,4 +1,6 @@
 class MansionsController < ApplicationController
+   skip_before_action :authenticate_user!, only: [ :index, :show]
+
   def index
     @mansions = Mansion.all
     @markers = @mansions.geocoded.map do |mansion|

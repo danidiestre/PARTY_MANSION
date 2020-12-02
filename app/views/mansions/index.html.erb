@@ -11,7 +11,7 @@
             <div class="card-trip-infos px-3">
               <div>
                 <h2> <%= mansion.title %></h2>
-                <p> <%= mansion.description %> </p>
+                <p> <%= truncate(mansion.description, length: 140) %> </p>
               </div>
               <h2 class="card-trip-pricing">£ <%= mansion.price %>/night</h2>
             </div>
