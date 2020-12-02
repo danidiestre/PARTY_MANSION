@@ -33,3 +33,11 @@ document.addEventListener('turbolinks:load', () => {
   // initSelect2();
   initAutocomplete()
 });
+
+
+// Added by Dani
+import { initMapbox } from '../plugins/init_mapbox';
+
+document.addEventListener('turbolinks:load', () => {
+  initMapbox();
+})

@@ -1,6 +1,15 @@
 class MansionsController < ApplicationController
   def index
     @mansions = Mansion.all
+    @markers = @mansions.geocoded.map do |mansion|
+      {
+        lat: mansion.latitude,
+        lng: mansion.longitude,
+        infoWindow: render_to_string(partial: "info_window", locals: { mansion: mansion }),
+        image_url: helpers.asset_url('logo-1.png')
+
+      }
+    end
   end
 
   def show

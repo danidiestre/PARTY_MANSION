@@ -1,6 +1,12 @@
 .show-banner {
   height: 40vh;
+  width: 100%;
   object-fit: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+.booking-form { 
+  position: sticky;
+  top: 5px;
 }
