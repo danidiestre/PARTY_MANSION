@@ -6,7 +6,7 @@ class MansionsController < ApplicationController
         lat: mansion.latitude,
         lng: mansion.longitude,
         infoWindow: render_to_string(partial: "info_window", locals: { mansion: mansion }),
-        image_url: helpers.asset_url('logo-1.png')
+        image_url: helpers.asset_url('logo-3.png')
 
       }
     end
