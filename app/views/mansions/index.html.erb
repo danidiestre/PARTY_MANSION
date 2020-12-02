@@ -3,10 +3,10 @@
   <div class="d-flex index-container">
     <div class="mansion-list w-50 h-100">
       <% @mansions.each do |mansion| %>
-      <%= link_to mansion_path(mansion) do  %>
-        <div class="card-product border-card mb-3">
-          <% if mansion.photo.attached? %>
-           <%= cl_image_tag mansion.photo.key, class: "h-100"  %>
+        <%= link_to mansion_path(mansion) do  %>
+          <div class="card-product border-card mb-3">
+            <% if mansion.photo.attached? %>
+              <%= cl_image_tag mansion.photo.key, class: "h-100"  %>
             <% end %>
             <div class="card-trip-infos px-3">
               <div>
@@ -17,14 +17,13 @@
             </div>
           </div>
         <% end %>
-      <% end %>
+      <% end %>  
     </div>
-
-    <div id="map"
-     style="width: 100%; height: 600px;"
-     data-markers="<%= @markers.to_json %>"
-     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"> 
-    </div>
+      <div id="map"
+      style="width: 50%; height: 600px;"
+      data-markers="<%= @markers.to_json %>"
+      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"> 
+      </div>
 
   </div>
 </div>
