@@ -26,8 +26,8 @@
 
                      <h2> <%= mansion.title %></h2>
                     <div class="d-flex align-items-center ">
-                         <i class="fas fa-pencil-alt"></i><%= link_to "Edit ", mansions_path, class: "link"  %>
-                         <i class="far fa-trash-alt"></i><%= link_to "Delete", mansions_path, class: "link"  %>
+                         <i class="fas fa-pencil-alt"></i><%= link_to "Edit ", edit_mansion_path(mansion), class: "link"  %>
+                         <i class="far fa-trash-alt"></i><%= link_to "Delete", mansion_path(mansion),method: :delete, class: "link"  %>
                     </div>
 
                   </div>

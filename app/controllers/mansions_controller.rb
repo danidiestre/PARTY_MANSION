@@ -48,15 +48,17 @@ class MansionsController < ApplicationController
   end
 
   def edit
-    @mansion
+    @mansion = Mansion.find(params[:id])
   end
 
   def update
+    @mansion = Mansion.find(params[:id])
     @mansion.update(mansion_params)
     redirect_to mansion_path(@mansion)
   end
 
   def destroy
+    @mansion = Mansion.find(params[:id])
     @mansion.destroy
     redirect_to mansions_path
   end
