@@ -22,7 +22,7 @@ class MansionsController < ApplicationController
   def show
     @mansion = Mansion.find(params[:id])
     @booking = Booking.new
-    @marker = { lat: @mansion.latitude, lng: @mansion.longitude, infoWindow: render_to_string(partial: "info_window", locals: { mansion: @mansion }), image_url: helpers.asset_url('logo-3.png') }
+    @markers = [{ lat: @mansion.latitude, lng: @mansion.longitude, infoWindow: render_to_string(partial: "info_window", locals: { mansion: @mansion }), image_url: helpers.asset_url('logo-3.png') }]
   end
 
   def new
