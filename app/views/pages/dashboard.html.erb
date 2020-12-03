@@ -21,13 +21,15 @@
             <% @user_mansions.each do |mansion| %>
               <%= link_to mansion_path(mansion) do  %>
                 <div class="card-product border-card mb-3">
-                    <%= cl_image_tag mansion.photos.first.key, class: "h-100"  %>
+                    <%= cl_image_tag mansion.photos.first.key %>
                   <div class="card-trip-infos px-3">
-                    <div>
-                        <h2> <%= mansion.title %></h2>
-                        <p> <%= truncate(mansion.description, length: 140) %> </p>
+
+                     <h2> <%= mansion.title %></h2>
+                    <div class="d-flex align-items-center ">
+                         <i class="fas fa-pencil-alt"></i><%= link_to "Edit ", mansions_path, class: "link"  %>
+                         <i class="far fa-trash-alt"></i><%= link_to "Delete", mansions_path, class: "link"  %>
                     </div>
-                    <p class="card-trip-pricing"><strong>£ <%= mansion.price %>/night</strong></p>
+
                   </div>
                 </div>
               <% end %>
