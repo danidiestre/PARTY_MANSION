@@ -2,16 +2,13 @@
   <div class="container">
     <%= link_to root_path, class: "navbar-brand" do %>
       <div id="logo_name">
-        <%= image_tag "logo.png", alt: "MBNB", width: 100 %>
+        <%= image_tag "logo.png", class: "rotate", alt: "MBNB", width: 100 %>
         <h6 id="name">Mansions Booze & Beats</h6>
       </div>
       <% end %>
-
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <i class="fas fa-bars text-white"></i>
     </button>
-
-
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <% if user_signed_in? %>
