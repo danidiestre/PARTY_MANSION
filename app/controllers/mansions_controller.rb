@@ -1,5 +1,5 @@
 class MansionsController < ApplicationController
-   skip_before_action :authenticate_user!, only: [ :index, :show]
+  skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
     if params[:query].present?
@@ -22,6 +22,9 @@ class MansionsController < ApplicationController
   def show
     @mansion = Mansion.find(params[:id])
     @booking = Booking.new
+
+    @markers = [{ lat: @mansion.latitude, lng: @mansion.longitude, infoWindow: render_to_string(partial: "info_window", locals: { mansion: @mansion }), image_url: helpers.asset_url('logo-3.png') }]
+
     @availabilities = @mansion.bookings.map do |booking|
       {
         from: booking.start_date.strftime('%Y-%m-%e'),
@@ -44,7 +47,19 @@ class MansionsController < ApplicationController
     end
   end
 
+  def edit
+    @mansion
+  end
 
+  def update
+    @mansion.update(mansion_params)
+    redirect_to mansion_path(@mansion)
+  end
+
+  def destroy
+    @mansion.destroy
+    redirect_to mansions_path
+  end
 
   private
 
