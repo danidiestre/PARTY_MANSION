@@ -5,8 +5,8 @@
       <% @mansions.each do |mansion| %>
         <%= link_to mansion_path(mansion) do  %>
           <div class="card-product border-card mb-3">
-            <% if mansion.photo.attached? %>
-              <%= cl_image_tag mansion.photo.key, class: "h-100"  %>
+            <% if mansion.photos.attached? %>
+              <%= cl_image_tag mansion.photos.first.key, class: "h-100"  %>
             <% end %>
             <div class="card-trip-infos px-3">
               <div>
