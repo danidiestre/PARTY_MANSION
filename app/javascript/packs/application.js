@@ -35,9 +35,12 @@ document.addEventListener('turbolinks:load', () => {
 });
 
 
-// Added by Dani
+// Added by Dani -- Map for the index/show
 import { initMapbox } from '../plugins/init_mapbox';
+import {initFlatpickr} from "../plugins/init_flatpickr"
 
 document.addEventListener('turbolinks:load', () => {
   initMapbox();
+  initFlatpickr();
 })
+

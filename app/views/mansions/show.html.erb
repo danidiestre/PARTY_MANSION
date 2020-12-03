@@ -10,7 +10,8 @@
         <div class="bg-white p-3">
           <p><%= @mansion.description %></p>
         </div>
-                <div class="my-3 bg-white p-3">
+        
+        <div class="my-3 bg-white p-3">
           <p>Details of the Mansion:</p>
           <div class="d-flex">
             <p class="mb-0"><i class="fas fa-user-friends mr-1"></i><%= @mansion.capacity %></p>
@@ -21,11 +22,13 @@
       </div>
       <div class="col-4">
         <div class="my-3 bg-white p-3 booking-form border-card">
-          <p>Book this place!</p>
-            <%= simple_form_for [ @mansion, @booking ] do |f| %>
-              <%= f.input :start_date %>
-              <%= f.input :end_date %>
-              <%= f.submit "Book", :class => "btn btn-primary"  %>
+          <h4>Book this place!</h4>
+            <%= simple_form_for [@mansion, @booking] do |f| %>
+            <div id="availabilities" data-availabilities="<%= @availabilities.to_json %> ">         
+            </div>
+              <%= f.input :date, as: :string, required: false, input_html: {class: "datepicker"} %>
+              <%#= f.input :end_date,  as: :string, required: false, input_html: {class: "datepicker"} %>
+              <%= f.button :submit, "Book", class: "btn btn-primary" %>
             <% end %>
         </div>
       </div>
