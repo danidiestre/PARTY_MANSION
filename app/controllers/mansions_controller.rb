@@ -22,6 +22,12 @@ class MansionsController < ApplicationController
   def show
     @mansion = Mansion.find(params[:id])
     @booking = Booking.new
+    @availabilities = @mansion.bookings.map do |booking|
+      {
+        from: booking.start_date.strftime('%Y-%m-%e'),
+        to: booking.end_date.strftime('%Y-%m-%e')
+      }
+    end
   end
 
   def new
@@ -37,6 +43,8 @@ class MansionsController < ApplicationController
       render :new
     end
   end
+
+
 
   private
 
