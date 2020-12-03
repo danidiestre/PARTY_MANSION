@@ -40,15 +40,35 @@
       </div>
       <div class="col-4">
         <div class="my-3 bg-white p-3 booking-form border-card">
+    
           <h4>Book this place!</h4>
-            <%= simple_form_for [@mansion, @booking] do |f| %>
-            <div id="availabilities" data-availabilities="<%= @availabilities.to_json %> ">         
-            </div>
-              <%= f.input :date, as: :string, required: false, input_html: {class: "datepicker"} %>
-              <%#= f.input :end_date,  as: :string, required: false, input_html: {class: "datepicker"} %>
-              <%= f.button :submit, "Book", class: "btn btn-primary" %>
-            <% end %>
+          <%= simple_form_for [@mansion, @booking] do |f| %>
+          <div id="availabilities" data-availabilities="<%= @availabilities.to_json %> ">         
+          </div>
+            <%= f.input :date, as: :string, required: false, input_html: {class: "datepicker"} %>
+            <%#= f.input :end_date,  as: :string, required: false, input_html: {class: "datepicker"} %>
+            <%= f.button :submit, "Book", class: "btn btn-primary w-100" %>
+            
+            <div id="price" data-price="<%= @mansion.price %> ">
+
+          </div>
+
+
+
+
+          <% end %>
         </div>
+        
+        
+
+
+
+
+
+
+
+
+
       </div>
     </div>
   </div>
