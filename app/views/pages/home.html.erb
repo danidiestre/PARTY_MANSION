@@ -11,7 +11,7 @@
         <div class="col-xs-12 col-sm-6 col-md-4">
           <%= link_to mansion_path(mansion) do  %>
           <div class="card border-card no-border h-100">
-            <div class="img-card" style="background-image: url(<%= cl_image_path mansion.photo.key %>)"></div>
+            <div class="img-card" style="background-image: url(<%= cl_image_path mansion.photos.first.key %>)"></div>
             <div class="card-body">
               <h4><strong><%= mansion.title %></strong></h4>
               <p><%= truncate(mansion.description, length: 140) %></p>
