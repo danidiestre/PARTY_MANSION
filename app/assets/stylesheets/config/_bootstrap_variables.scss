@@ -23,3 +23,13 @@ $border-radius-lg: 2px;
 $border-radius-sm: 2px;
 
 // Override other variables below!
+
+
+.nav-pills .nav-link {
+  color: $primary;
+}
+
+.nav-pills .nav-link.active {
+    color: white;
+  }
+  
