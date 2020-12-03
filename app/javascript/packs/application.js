@@ -48,4 +48,4 @@ document.addEventListener('turbolinks:load', () => {
 
   initFlatpickr();
 })
-})
+
