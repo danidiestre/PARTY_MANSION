@@ -1,5 +1,5 @@
 class MansionsController < ApplicationController
-   skip_before_action :authenticate_user!, only: [ :index, :show]
+  skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
     if params[:query].present?
@@ -31,7 +31,6 @@ class MansionsController < ApplicationController
         to: booking.end_date.strftime('%Y-%m-%e')
       }
     end
-
   end
 
   def new
@@ -48,7 +47,19 @@ class MansionsController < ApplicationController
     end
   end
 
+  def edit
+    @mansion
+  end
 
+  def update
+    @mansion.update(mansion_params)
+    redirect_to mansion_path(@mansion)
+  end
+
+  def destroy
+    @mansion.destroy
+    redirect_to mansions_path
+  end
 
   private
 
