@@ -5,21 +5,11 @@
 
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
           <div class="carousel-inner">
-            <div class="carousel-item active">
-              <% @mansion.photos.each do |photo| %>
+            <% @mansion.photos.each_with_index do |photo, index| %>
+              <div class="carousel-item <%= 'active' if index == 0  %>">
                 <%= cl_image_tag photo.key, crop: :fill, :class => "d-block w-100 show-banner my-3" %>
-              <% end %>
-            </div>
-            <div class="carousel-item">
-              <% @mansion.photos.each do |photo| %>
-                <%= cl_image_tag photo.key, crop: :fill, :class => "d-block w-100 show-banner my-3" %>
-              <% end %>
-            </div>
-            <div class="carousel-item">
-              <% @mansion.photos.each do |photo| %>
-                <%= cl_image_tag photo.key, crop: :fill, :class => "d-block w-100 show-banner my-3" %>
-              <% end %>
-            </div>
+              </div>
+            <% end %>
           </div>
           <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
