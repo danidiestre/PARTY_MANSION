@@ -19,9 +19,9 @@
       <% @mansions.each do |mansion| %>
       <div class="w-100" data-aos="fade-right">
         <%= link_to mansion_path(mansion) do  %>
-          <div class="card-product border-card mb-3" >
-            <% if mansion.photo.attached? %>
-              <%= cl_image_tag mansion.photo.key, class: "h-100"  %>
+          <div class="card-product border-card mb-3">
+            <% if mansion.photos.attached? %>
+              <%= cl_image_tag mansion.photos.first.key, class: "h-100"  %>
             <% end %>
             <div class="card-trip-infos px-3">
               <div>

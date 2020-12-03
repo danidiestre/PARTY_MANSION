@@ -41,6 +41,6 @@ class MansionsController < ApplicationController
   private
 
   def mansion_params
-    params.require(:mansion).permit(:address, :price, :capacity, :title, :description, :photo)
+    params.require(:mansion).permit(:address, :price, :capacity, :title, :description, photos: [])
   end
 end
