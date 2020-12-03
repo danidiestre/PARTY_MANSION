@@ -1,6 +1,6 @@
 class BookingsController < ApplicationController
   def create
-    @booking = Booking.new(booking_params)
+    @booking = Booking.new(extract_dates)
     @mansion = Mansion.find(params['mansion_id'])
     @booking.mansion = @mansion
     @booking.user = current_user
@@ -13,7 +13,9 @@ class BookingsController < ApplicationController
     end
   end
 
-  def booking_params
-    params.require(:booking).permit(:start_date, :end_date)
+  def extract_dates
+    dates = params[:booking][:date].split(" to ")
+    {start_date: dates[0], end_date: dates[1]}
   end
+
 end
