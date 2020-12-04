@@ -4,10 +4,10 @@ Rails.application.routes.draw do
   get "/dashboard", to: 'pages#dashboard'
   resources :mansions do
     resources :bookings, only: [:create]
-    resources :reviews, only: [:new, :create]
 
   end
   resources :bookings, only: [:create] do
+    resources :reviews, only: [:new, :create]
     member do
       post :accepted
       post :rejected

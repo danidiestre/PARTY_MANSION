@@ -2,16 +2,15 @@ class ReviewsController < ApplicationController
 
     def new
         @review = Review.new
-        @mansion = Mansion.find(params[:mansion_id])
+        @booking = Booking.find(params[:booking_id])
     end
     
     def create
-        @mansion = Mansion.find(params[:id])
         @booking = Booking.find(params[:booking_id])
         @review = Review.new(review_params)
-        @review.mansion = @booking
+        @review.booking = @booking
         if @review.save
-          redirect_to mansion_path(@mansion)
+          redirect_to mansion_path(@booking.mansion)
         else
           render :new
           
