@@ -4,6 +4,8 @@ class User < ApplicationRecord
   has_many :mansions
   has_many :bookings
   has_many :requested_bookings, through: :mansions, source: :bookings
+  has_many :reviews, through: :mansions, source: :bookings
+
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   has_one_attached :avatar
