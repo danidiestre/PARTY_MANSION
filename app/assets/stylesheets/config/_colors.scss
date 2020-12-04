@@ -8,3 +8,21 @@ $orange: #E67E22;
 $green: #1EDD88;
 $gray: #0E0000;
 $light-gray: #F4F4F4;
+
+.pending {
+  color: $gray;
+  opacity: 0.7;
+  font-weight: normal;
+}
+
+.accepted {
+  color: green;
+  opacity: 0.8;
+  font-weight: normal;
+}
+
+.rejected {
+  color: red;
+  opacity: 0.8;
+  font-weight: normal;
+}
