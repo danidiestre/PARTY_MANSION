@@ -84,7 +84,7 @@
                     <div class="d-flex justify-content-between align-items-center my-2">
                       <div>
                         <p>from <%= booking.start_date %> to <%= booking.end_date %> </p>
-                        <p>€ <%= booking.mansion.price %>/night</p>
+                        <p><strong>€ <%= booking.mansion.price %>/night</strong></p>
                       </div>
                       <%= link_to "Review", new_booking_review_path(booking), class: "btn btn-outline-primary mr-4"  %>
                     </div>
