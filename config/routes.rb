@@ -5,5 +5,11 @@ Rails.application.routes.draw do
   resources :mansions do
     resources :bookings, only: [:create]
   end
+  resources :bookings, only: [:create] do
+    member do
+      post :accept
+      post :decline
+    end
+  end
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
