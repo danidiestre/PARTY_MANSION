@@ -28,25 +28,59 @@
         <div class="bg-white p-3">
           <p><%= @mansion.description %></p>
         </div>
-        
+
         <div class="my-3 bg-white p-3">
           <p>Details of the Mansion:</p>
           <div class="d-flex">
             <p class="mb-0"><i class="fas fa-user-friends mr-1"></i><%= @mansion.capacity %></p>
             <p class="mb-0"><i class="fas fa-euro-sign ml-3 mr-1"></i><%= @mansion.price %></p>
           </div>
+        </div>
 
+        <div class="my-3 bg-white p-3">
+          <h3>Reviews</h3>
+          <% if @reviews.empty? %>
+            <p>No reviews yet</p>
+          <% else %>
+            <ul class="list-group">
+              <% @reviews.each do |review| %>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                  <div>
+                    <%= cl_image_tag review.booking.user.avatar.key, class: "avatar-large "%>
+                  </div>
+
+                  <div class=" flex-grow-1 ml-3">
+                    <h4> <%= review.booking.user.email.capitalize.split("@")[0] %> </h4>
+                    <p> <%= review.content %> </p>
+                    <span class="badge badge-primary badge-pill">
+                       <%= review.rating.to_f %>
+                      <% counter = 0 %>
+                      <% 5.times do %>
+                        <i class="fa <%= review.rating > counter ? 'fa-star' : 'fa-star-o' %>" ></i>
+                        <% counter += 1 %>
+                      <% end %>
+                    </span>
+
+                  </div>
+
+                </li>
+              <% end %>
+            </ul>
+          <% end %>
+        </div>
+
+      </div>
       <div class="col-4">
         <div class="my-3 bg-white p-3 booking-form border-card">
-    
+
           <h4>Book this place!</h4>
           <%= simple_form_for [@mansion, @booking] do |f| %>
-          <div id="availabilities" data-availabilities="<%= @availabilities.to_json %> ">         
+          <div id="availabilities" data-availabilities="<%= @availabilities.to_json %> ">
           </div>
             <%= f.input :date, as: :string, required: false, input_html: {class: "datepicker"} %>
             <%#= f.input :end_date,  as: :string, required: false, input_html: {class: "datepicker"} %>
             <%= f.button :submit, "Book", class: "btn btn-primary w-100" %>
-            
+
             <div id="price" data-price="<%= @mansion.price %> ">
 
           </div>
