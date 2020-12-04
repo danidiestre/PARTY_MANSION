@@ -15,7 +15,20 @@ class BookingsController < ApplicationController
 
   def extract_dates
     dates = params[:booking][:date].split(" to ")
-    {start_date: dates[0], end_date: dates[1]}
+    { start_date: dates[0], end_date: dates[1] }
   end
 
+  def accepted
+    @booking = Booking.new
+    @booking.status = "accepted"
+    @booking.save
+    redirect_to dashboard_path
+  end
+
+  def rejected
+    @booking = Booking.new
+    @booking.status = "rejected"
+    @booking.save
+    redirect_to dashboard_path
+  end
 end
