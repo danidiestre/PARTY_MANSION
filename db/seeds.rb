@@ -122,11 +122,11 @@ calella = Mansion.create(
   user: jaume
 )
 file_calella = URI.open('https://images.unsplash.com/photo-1568391300292-a5a1d96b82aa?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=628&q=80')
-calella.photos.attach(io: file_palamos, filename: 'calella.png', content_type: 'image/png')
+calella.photos.attach(io: file_calella, filename: 'calella.png', content_type: 'image/png')
 file_calella = URI.open('https://images.unsplash.com/photo-1561753757-d8880c5a3551?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80')
-calella.photos.attach(io: file_palamos, filename: 'calella.png', content_type: 'image/png')
+calella.photos.attach(io: file_calella, filename: 'calella.png', content_type: 'image/png')
 file_calella = URI.open('https://images.unsplash.com/photo-1531971589569-0d9370cbe1e5?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=760&q=80')
-calella.photos.attach(io: file_palamos, filename: 'calella.png', content_type: 'image/png')
+calella.photos.attach(io: file_calella, filename: 'calella.png', content_type: 'image/png')
 
 
 begur = Mansion.create(
