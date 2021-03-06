@@ -1,0 +1,29 @@
+.main-btn {
+    color: #fff;
+    background-color: #FF7A00;
+    border: 1px solid #FF7A00;
+    padding: 8px 16px;
+    width: 100%;
+    margin-bottom: 16px;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 2px;
+    display: inline-block;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.secondary-btn {
+    color: #FF7A00;
+    padding: 6px 0;
+    display: inline-block;
+    font-weight: 400;
+    user-select: none;
+    background-color: inherit;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 2px;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+
