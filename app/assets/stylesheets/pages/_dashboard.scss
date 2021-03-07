@@ -9,5 +9,12 @@
   min-height: calc(100vh - 260px);
 }
 
+.data-container {
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-between;
+  margin: 0 16px;
+}
+
 
 
