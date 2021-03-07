@@ -34,7 +34,7 @@ balmes = Mansion.create(
   address: 'Carrer Balmes 382',
   price: 800,
   capacity: 300,
-  title: 'Luxurious mansion in Balmes',
+  title: 'Luxurious Mansion',
   description:'Serve up some tapas at the breakfast bar before breaking bread on the outdoor patio at your private golden-hued villa. With an open wall connecting the veranda to the interior great room, you’ll be able to seamlessly move between relaxation and entertainment. Kupuri Beach and Punta de Mita Village are both just minutes away, and an included golf cart makes getting there half the fun. Copyright © Mansions B&B. All rights reserved.',
   user: ana
 )
@@ -50,7 +50,7 @@ muntaner = Mansion.create(
   address: 'Carrer Muntaner 192',
   price: 10000,
   capacity: 100,
-  title: 'Whole building on Muntaner',
+  title: 'Modern House',
   description:'Discover an oasis of luxury and style at the very heart of Barcelona. The beautiful infinity-edge swimming pool with opposing contours sits right next to the pristine sands of a picture-perfect beach dotted with palm trees. Or enjoy a soothing soak in the bubbles of the outdoor hot tub. After all, you only live once, let it be in great style. Copyright © Mansions B&B. All rights reserved.',
   user: rocio
 )
@@ -67,7 +67,7 @@ plaza = Mansion.create(
   address: 'Plaza Catalunya 1',
   price: 2000,
   capacity: 500,
-  title: 'Penthouse luxury Plaza Catalunya',
+  title: 'Luxury Hotel',
   description:'A fantastic location, right next to the ramblas with an amazing view of the city. Be dazzled by the bright splendor of this hillside villa, which overlooks the 93 year old Terramar golf club. The sunny yet sheltered deck, complete with sparkling pool and recliners lets guests bask in Mediterranean sunrises and fresh sea breezes. Numerous bedrooms, an impressive aquarium plus fully-stocked bar add to the appeal, with easy access to the medieval heart and sandy beaches of Barcelona. Copyright © Mansions B&B. All rights reserved.',
   user: jaume
   )
@@ -83,7 +83,7 @@ pearson = Mansion.create(
   address: 'Avenida Pearson',
   price: 1200,
   capacity: 200,
-  title: '200 person Mansion in Pedralbes',
+  title: 'Mansion in Pedralbes',
   description:' Get an amazing view of the city with this incredible mansion all the way up in Pedralbes hidden away. Practice putting on the finely manicured grounds of this grand white two-story hacienda with its upper balcony running the entire width and the modern architecture representing one of Catalan’s finest villas. The private kidney pool seems right out of a David Hockney painting. Open lounge areas, alfresco dining areas, swing chairs, and play areas pepper the generous lawns. Copyright © Mansions B&B. All rights reserved.',
   user: dani
 )
@@ -99,7 +99,7 @@ palamos = Mansion.create(
   address: 'Palamos carrer de laigua',
   price: 1500,
   capacity: 50,
-  title: 'Costa Brava Miedeval Castle',
+  title: 'Millenials House Party',
   description:'Bring all your friends and have an amazing experience in this Costa Brava castle! Whether you’re in town for business or pleasure, or both, Palamos has lots to see and do. Conveniently located a short walk from the cities facilities, this mansion is the perfect home base for exploring this beautiful city. With two bedrooms and a guest area, there are total accommodations for five, making it perfect for a small family, or group of friends or colleagues. Copyright © Mansions B&B. All rights reserved.',
   user: bruna
 )
@@ -117,7 +117,7 @@ calella = Mansion.create(
   address: 'Calella de Palafurgell, Girona',
   price: 2500,
   capacity: 100,
-  title: 'Villa Calella de Palafurgell',
+  title: 'Villa Calella',
   description:'Bring all your friends and have an amazing experience in this Costa Brava castle! Whether you’re in town for business or pleasure, or both, Palamos has lots to see and do. Conveniently located a short walk from the cities facilities, this mansion is the perfect home base for exploring this beautiful city. With two bedrooms and a guest area, there are total accommodations for five, making it perfect for a small family, or group of friends or colleagues. Copyright © Mansions B&B. All rights reserved.',
   user: jaume
 )
@@ -149,7 +149,7 @@ llafranc = Mansion.create(
   address: 'Llafranch, Girona',
   price: 4230,
   capacity: 73,
-  title: 'Villa Calella de Palafurgell',
+  title: 'Villa Calella',
   description:"This house offers the best of Mediterranean life, with spectacular views of the white sand beaches of Port Pelegrí and Port Bo, and a fantastic location on the first pedestrian line of this historic town on the Costa Brava. All the restaurants, shops, bars and the wonderful beaches of this picturesque and well-kept fishing village are just a few seconds walk through the pedestrian promenade. You don't even have to leave your home to enjoy 24/7 access to panoramic views of world-famous coves, cliffs, beaches, and ships. Built in 1934, the house was built to take full advantage of its privileged elevated position, with a charming 30 m² retractable terrace overlooking the outside terrace with pergola and wooden awning.",
   user: dani
 )

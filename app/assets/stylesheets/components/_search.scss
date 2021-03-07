@@ -1,6 +1,16 @@
 .search-bar {
-
-  width: 545px;
+  width: 77vw;
   border-radius: 10px;
+}
 
+@media (max-width: 600px) {
+  .search-bar {
+    width: 92vw;
+  }
+}
+
+@media (max-width: 1100px) {
+  .search-bar {
+    width: 90vw;
+  }
 }
