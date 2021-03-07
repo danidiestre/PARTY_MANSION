@@ -1,10 +1,3 @@
-// #map {
-//   height: 100vh;
-//   position: sticky;
-//   top: 0;
-//   margin-left: 20px;
-// }
-
 .mapboxgl-popup {
   max-width: 200px;
 }
@@ -19,3 +12,35 @@
   height: 300px;
   margin-bottom: 40px;
 }
+
+.index-map {
+  width: 50%; 
+  height: 600px; 
+  margin-left: 20px; 
+  position: sticky; 
+  top: 10px; 
+}
+
+.cards-map-container {
+  display: flex;
+}
+
+
+.cards-container {
+  width: 50%;
+}
+
+@media (max-width: 760px) {
+  .cards-map-container {
+    flex-direction: column;
+  } .index-map {
+    margin-left: 0;
+    left: 0;
+    width: 100%;
+    height: 27vh;
+    margin-bottom: 8px;
+  } .cards-container {
+    width: 100%;
+  }
+}
+
