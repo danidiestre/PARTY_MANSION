@@ -84,8 +84,8 @@
                         <div>
                           <p><i class="far fa-calendar-alt pr-2"></i><%= booking.start_date.strftime('%b %d, %Y') %> to <%= booking.end_date.strftime('%b %d, %Y') %> </p>
                           <p><i class="fas fa-euro-sign pr-2"></i><%= booking.mansion.price %>/night</p>
-                          <% if DateTime.current.to_date == booking.end_date %>
-                            <%= link_to "Leave a review", new_booking_review_path(booking), class: "secondary-btn"  %>
+                          <% if DateTime.current.to_date >= booking.end_date %>
+                            <%= link_to '<i class="fas fa-pencil-alt"></i> Leave a review'.html_safe, new_booking_review_path(booking), class: "review"  %>
                           <% end %>
                         </div>
                       </div>
