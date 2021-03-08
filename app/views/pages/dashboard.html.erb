@@ -19,7 +19,7 @@
           <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
             <div class="mansion-list w-100 h-100">
               <% @user_mansions.each do |mansion| %>
-                <div class="card-product border-card">
+                <div class="card-product border-card mb-3">
                   <%= link_to mansion_path(mansion) do  %>
                     <%= cl_image_tag mansion.photos.first.key %>
                     <div class="data-container">
@@ -28,9 +28,9 @@
                         <p class="mt-0"><i class="fas fa-map-marker-alt pr-2"></i><%= mansion.address %></p>
                         <p class="mt-0"><i class="fas fa-euro-sign pr-2"></i><%= mansion.price %>/night</p>
                       </div>
-                      <div>
-                        <%= link_to '<i class="fas fa-pencil-alt edit"></i>'.html_safe, edit_mansion_path(mansion), class: "secondary-btn pt-0"  %>
-                        <%= link_to '<i class="fas fa-trash-alt delete"></i>'.html_safe, mansion_path(mansion),method: :delete, class: "secondary-btn pt-0"  %>
+                      <div class="d-flex">
+                        <%= link_to '<i class="fas fa-pencil-alt edit"></i>'.html_safe, edit_mansion_path(mansion) %>
+                        <%= link_to '<i class="fas fa-trash-alt delete"></i>'.html_safe, mansion_path(mansion),method: :delete %>
                       </div>
                     </div>
                   <% end %>
@@ -53,15 +53,17 @@
                       <p class="card-trip-pricing"><i class="fas fa-euro-sign pr-2"></i><%= booking.mansion.price %>/night</p>
                       <p class="dates-p"><i class="far fa-calendar-alt pr-2"></i><%= booking.start_date.strftime('%b %d, %Y') %> to <%= booking.end_date.strftime('%b %d, %Y') %></p>
                     </div>
-                    <div class="d-flex flex-column justify-content-between">
-                      <div>
+                    <div class="d-flex justify-content-between">
                         <% if booking.status == "pending"  %>
-                          <%= link_to '<i class="fas fa-times"></i>'.html_safe, rejected_booking_path(booking),  method: :post, class: "rejected" %>
-                          <%= link_to '<i class="fas fa-check"></i>'.html_safe, accepted_booking_path(booking), method: :post, class: "accepted" %>
+                          <%= link_to '<i class="fas fa-times"></i>'.html_safe, rejected_booking_path(booking),  method: :post, class: "decline" %>
+                          <%= link_to '<i class="fas fa-check"></i>'.html_safe, accepted_booking_path(booking), method: :post, class: "accept" %>
                         <% else %>
-                          <h6 class="<%= booking.status %> booking"><%= booking.status.capitalize %></h6>
+                          <% if booking.status == "accepted" %>
+                            <i class="far fa-check-circle accepted"></i>
+                          <% elsif booking.status == "rejected" %>
+                            <i class="far fa-times-circle rejected"></i>
+                          <% end %>
                         <% end %>
-                      </div>
                     </div>
                   </div>
                 </div>
@@ -97,6 +99,3 @@
     </div>
   </div>
 </div>
-
-
-

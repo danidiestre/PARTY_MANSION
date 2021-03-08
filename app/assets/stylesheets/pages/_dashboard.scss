@@ -17,15 +17,17 @@
 }
 
 .edit {
-  font-size: 20px;
-  margin-right: 8px;
+  color: #FF7A00;
+  font-size: 17px;
   &:hover {
     opacity: 0.7;
   }
 }
 
 .delete {
-  font-size: 20px;
+  color: #FF7A00;
+  font-size: 14px;
+  margin-left: 4px;
   &:hover {
     opacity: 0.7;
   }
@@ -37,8 +39,22 @@
   font-weight: normal;
 }
 
-
 .accepted {
+  color: green;
+  opacity: 0.8;
+  font-weight: normal;
+  font-size: 26px;
+}
+
+.rejected {
+  color: red;
+  opacity: 0.8;
+  font-weight: normal;
+  font-size: 26px;
+}
+
+
+.accept {
   color: green;
   opacity: 0.8;
   font-weight: normal;
@@ -48,7 +64,7 @@
   }
 }
 
-.rejected {
+.decline {
   color: red;
   opacity: 0.8;
   font-weight: normal;
@@ -65,6 +81,7 @@
 
 .pending-status {
   padding-right: 8px;  
+  font-size: 17px;
 }
 
 @media (min-width: 700px) {
@@ -73,6 +90,8 @@
   } .pending-status {
       padding-right: 20px;
       font-size: 20px;
+  } .delete {
+    margin-left: 16px;
   }
 }
 
