@@ -20,18 +20,20 @@
             <div class="mansion-list w-100 h-100">
               <% @user_mansions.each do |mansion| %>
                 <div class="card-product border-card">
-                  <%= cl_image_tag mansion.photos.first.key %>
-                  <div class="data-container">
-                    <div>
-                      <h2 class="pb-2"><%= mansion.title %></h2>
-                      <p class="mt-0"><i class="fas fa-map-marker-alt pr-2"></i><%= mansion.address %></p>
-                      <p class="mt-0"><i class="fas fa-euro-sign pr-2"></i><%= mansion.price %>/night</p>
+                  <%= link_to mansion_path(mansion) do  %>
+                    <%= cl_image_tag mansion.photos.first.key %>
+                    <div class="data-container">
+                      <div>
+                        <h2 class="pb-2"><%= mansion.title %></h2>
+                        <p class="mt-0"><i class="fas fa-map-marker-alt pr-2"></i><%= mansion.address %></p>
+                        <p class="mt-0"><i class="fas fa-euro-sign pr-2"></i><%= mansion.price %>/night</p>
+                      </div>
+                      <div>
+                        <%= link_to '<i class="fas fa-pencil-alt edit"></i>'.html_safe, edit_mansion_path(mansion), class: "secondary-btn pt-0"  %>
+                        <%= link_to '<i class="fas fa-trash-alt delete"></i>'.html_safe, mansion_path(mansion),method: :delete, class: "secondary-btn pt-0"  %>
+                      </div>
                     </div>
-                    <div>
-                      <%= link_to '<i class="fas fa-pencil-alt edit"></i>'.html_safe, edit_mansion_path(mansion), class: "secondary-btn pt-0"  %>
-                      <%= link_to '<i class="fas fa-trash-alt delete"></i>'.html_safe, mansion_path(mansion),method: :delete, class: "secondary-btn pt-0"  %>
-                    </div>
-                  </div>
+                  <% end %>
                 </div>
               <% end %>
             </div>
