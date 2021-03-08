@@ -2,7 +2,6 @@
   <div class="row justify-content-center">
     <div class="d-flex justify-content-center w-100">
       <div class="col-8">
-
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
           <div class="carousel-inner">
             <% @mansion.photos.each_with_index do |photo, index| %>
@@ -48,7 +47,6 @@
                   <div>
                     <%= cl_image_tag review.booking.user.avatar.key, class: "avatar-large "%>
                   </div>
-
                   <div class=" flex-grow-1 ml-3">
                     <h4> <%= review.booking.user.email.capitalize.split("@")[0] %> </h4>
                     <p> <%= review.content %> </p>
@@ -60,9 +58,7 @@
                         <% counter += 1 %>
                       <% end %>
                     </span>
-
                   </div>
-
                 </li>
               <% end %>
             </ul>
@@ -72,7 +68,6 @@
       </div>
       <div class="col-4">
         <div class="my-3 bg-white p-3 booking-form border-card">
-
           <h4>Book this place!</h4>
           <%= simple_form_for [@mansion, @booking] do |f| %>
           <div id="availabilities" data-availabilities="<%= @availabilities.to_json %> ">
@@ -80,16 +75,11 @@
             <%= f.input :date, as: :string, required: false, input_html: {class: "datepicker"} %>
             <%#= f.input :end_date,  as: :string, required: false, input_html: {class: "datepicker"} %>
             <%= f.button :submit, "Book", class: "btn btn-primary w-100" %>
-
             <div id="price" data-price="<%= @mansion.price %> ">
-
           </div>
-
           <% end %>
         </div>
       </div>
-
-
     </div>
   </div>
   <div id="map"
