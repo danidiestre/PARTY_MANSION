@@ -6,7 +6,38 @@
   background-repeat: no-repeat;
 }
 
+.show-page-section {
+  margin: 16px 0;
+  background-color: white;
+  padding: 16px;
+}
+
 .booking-form {
   position: sticky;
   top: 20px;
+}
+
+.mansion-detail-container {
+  width: 70%;
+  margin-right: 16px;
+}
+
+.book-place-container {
+  width: 30%;
+}
+
+.mansion-book-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+@media (max-width: 500px) {
+  .mansion-book-container {
+    flex-direction: column;
+  } .mansion-detail-container {
+    width: 100%;
+  } .book-place-container {
+    width: 100%;
+  }
 }

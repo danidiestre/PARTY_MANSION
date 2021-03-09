@@ -1,7 +1,6 @@
 <div class="container">
-  <div class="row justify-content-center">
-    <div class="d-flex justify-content-center w-100">
-      <div class="col-8">
+    <div class="mansion-book-container">
+      <div class="mansion-detail-container">
 
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
           <div class="carousel-inner">
@@ -21,15 +20,16 @@
           </a>
         </div>
 
-        <div class="bg-white p-3 mb-3">
+        <div class="show-page-section">
           <h1><%= @mansion.title %></h1>
           <p><i class="fas fa-map-marker-alt pr-2"></i><%= @mansion.address %></p>
         </div>
-        <div class="bg-white p-3">
+
+        <div class="show-page-section">
           <p><%= @mansion.description %></p>
         </div>
 
-        <div class="my-3 bg-white p-3">
+        <div class="show-page-section">
           <p>Details of the Mansion:</p>
           <div class="d-flex">
             <p class="mb-0"><i class="fas fa-user-friends mr-1"></i><%= @mansion.capacity %></p>
@@ -37,7 +37,7 @@
           </div>
         </div>
 
-        <div class="my-3 bg-white p-3">
+        <div class="show-page-section">
           <h3>Reviews</h3>
           <% if @reviews.empty? %>
             <p>No reviews yet</p>
@@ -48,7 +48,6 @@
                   <div>
                     <%= cl_image_tag review.booking.user.avatar.key, class: "avatar-large "%>
                   </div>
-
                   <div class=" flex-grow-1 ml-3">
                     <h4> <%= review.booking.user.email.capitalize.split("@")[0] %> </h4>
                     <p> <%= review.content %> </p>
@@ -60,19 +59,16 @@
                         <% counter += 1 %>
                       <% end %>
                     </span>
-
                   </div>
-
                 </li>
               <% end %>
             </ul>
           <% end %>
         </div>
-
       </div>
-      <div class="col-4">
-        <div class="my-3 bg-white p-3 booking-form border-card">
 
+      <div class="book-place-container">
+        <div class="mb-3 bg-white p-3 booking-form border-card">
           <h4>Book this place!</h4>
           <%= simple_form_for [@mansion, @booking] do |f| %>
           <div id="availabilities" data-availabilities="<%= @availabilities.to_json %> ">
@@ -80,18 +76,13 @@
             <%= f.input :date, as: :string, required: false, input_html: {class: "datepicker"} %>
             <%#= f.input :end_date,  as: :string, required: false, input_html: {class: "datepicker"} %>
             <%= f.button :submit, "Book", class: "btn btn-primary w-100" %>
-
             <div id="price" data-price="<%= @mansion.price %> ">
-
           </div>
-
           <% end %>
         </div>
       </div>
-
-
     </div>
-  </div>
+
   <div id="map"
   class="map-show-page"
   style="width: 100%; height: 300px;"

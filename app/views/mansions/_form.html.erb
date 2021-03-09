@@ -1,15 +1,17 @@
-<div class="container mt-4 mb-5">
-  <div class="form mt-3">
-    <h1>Enter Mansion details</h1>
-    <%= simple_form_for(@mansion) do |f| %>
-      <%= f.input :title %>
-      <%= f.input :address %>
-      <%= f.input :price %>
-      <%= f.input :capacity %>
-      <%= f.input :description %>
-      <%= f.input :photos, as: :file, input_html: { multiple: true } %>
-      <%= f.submit "Submit", :class => "btn btn-primary"  %>
-    <% end %>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-8 col-xs-8 my-5">
+      <h1>Enter Mansion details</h1>
+      <%= simple_form_for(@mansion) do |f| %>
+        <%= f.input :title %>
+        <%= f.input :address %>
+        <%= f.input :price %>
+        <%= f.input :capacity %>
+        <%= f.input :description %>
+        <%= f.input :photos, as: :file, input_html: { multiple: true } %>
+        <%= f.submit "Submit", :class => "btn btn-primary"  %>
+      <% end %>
+    </div>
   </div>
 </div>
 
