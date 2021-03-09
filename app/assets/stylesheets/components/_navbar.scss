@@ -33,6 +33,22 @@
   width: 40px;
 }
 
+.navbar-img {
+  background: transparent;
+  border: none;
+}
+
+.navbar-image {
+  border: none;
+  border-color: none;
+}
+
+.logout-navbar {
+  list-style-type: none;
+  text-align: center;
+  margin-bottom: 0;
+}
+
 .rotate {
   animation: rotation 5s infinite linear;
 }
